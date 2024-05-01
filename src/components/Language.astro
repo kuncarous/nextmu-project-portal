@@ -1,0 +1,16 @@
+---
+import { Icon } from '@steeze-ui/svelte-icon';
+import { GlobeAlt } from '@steeze-ui/heroicons';
+import { languageTag } from '~/paraglide/runtime';
+const { class: className } = Astro.props;
+---
+
+<div
+    class=`${className} flex cursor-pointer flex-row gap-1 rounded-xl border border-nextmu-green p-1.5 text-white hover:border-nextmu-green-hover active:border-nextmu-green-active bg-gray-500/45`
+    data-hs-overlay="#nxmu-language-modal"
+>
+    <Icon class="size-6 drop-shadow-text" src={GlobeAlt} theme="outline" />
+    <span class="mr-0.5 font-medium uppercase drop-shadow-text"
+        >{languageTag().split('-')[0]}</span
+    >
+</div>

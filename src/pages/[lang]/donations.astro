@@ -1,0 +1,61 @@
+---
+import * as m from '~/paraglide/messages';
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/Header.astro';
+import Footer from '~/components/Footer.astro';
+import { Icon } from '@steeze-ui/svelte-icon';
+import { Github } from '@steeze-ui/simple-icons';
+---
+
+<Layout title="NextMU">
+    <div class="container"></div>
+    <Header selected="donations" />
+    <main class="mt-[2rem] flex grow flex-col gap-14 text-white px-2">
+        <div
+            class="flex flex-col items-center text-4xl font-bold uppercase drop-shadow-text"
+        >
+            {m.page_donations_title()}
+        </div>
+        <div class="flex flex-row flex-wrap justify-center gap-x-4 gap-y-4">
+            <div
+                class="flex max-w-md flex-col items-center self-start text-xl drop-shadow-text max-md:max-w-[80%]"
+            >
+                <span
+                    class="text-center"
+                    set:html={m.donations_leftmessage()}
+                />
+            </div>
+            <div
+                class="flex max-w-md flex-col items-center self-start text-xl drop-shadow-text max-md:max-w-[80%]"
+            >
+                <span
+                    class="text-center"
+                    set:html={m.donations_rightmessage()}
+                />
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    body {
+        &::before,
+        .container {
+            z-index: -1;
+            background: url('/images/background.donations.webp') center top
+                repeat repeat;
+            content: ' ';
+            position: fixed;
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+        &::before {
+            filter: blur(16px);
+        }
+        .container {
+            background-repeat: no-repeat;
+            box-shadow: inset 100vw 1px rgba(64, 68, 75, 0.6);
+        }
+    }
+</style>

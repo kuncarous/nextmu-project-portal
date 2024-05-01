@@ -1,0 +1,56 @@
+---
+import * as m from '~/paraglide/messages';
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/Header.astro';
+import Footer from '~/components/Footer.astro';
+import { Icon } from '@steeze-ui/svelte-icon';
+import { Github } from '@steeze-ui/simple-icons';
+---
+
+<Layout title="NextMU">
+    <div class="container"></div>
+    <Header selected="contact-us" />
+    <main class="mt-[2rem] flex grow flex-col gap-14 text-white px-2">
+        <div
+            class="flex flex-col items-center text-4xl font-bold uppercase drop-shadow-text"
+        >
+            {m.page_contactus_title()}
+        </div>
+        <div
+            class="flex max-w-4xl flex-col items-center self-center text-xl drop-shadow-text first:max-w-[80vw] max-md:max-w-[80%]"
+        >
+            <iframe
+                class="max-w-[80vw]"
+                src="https://discord.com/widget?id=1025209137430265996&theme=dark"
+                width="350"
+                height="500"
+                allowtransparency="true"
+                frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    body {
+        &::before,
+        .container {
+            z-index: -1;
+            background: url('/images/background.contact-us.webp') center top
+                repeat repeat;
+            content: ' ';
+            position: fixed;
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+        &::before {
+            filter: blur(16px);
+        }
+        .container {
+            background-repeat: no-repeat;
+            box-shadow: inset 100vw 1px rgba(64, 68, 75, 0.6);
+        }
+    }
+</style>
