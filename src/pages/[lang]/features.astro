@@ -3,14 +3,17 @@ import * as m from '~/paraglide/messages';
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/Header.astro';
 import Footer from '~/components/Footer.astro';
-import { Icon } from '@steeze-ui/svelte-icon';
-import { Github } from '@steeze-ui/simple-icons';
+import { Languages } from '~/consts/languages';
+
+export function getStaticPaths() {
+    return Object.keys(Languages).map((lang) => ({ params: { lang } }));
+}
 ---
 
 <Layout title="NextMU">
     <div class="container"></div>
     <Header selected="features" />
-    <main class="mt-[2rem] flex grow flex-col gap-14 text-white px-2">
+    <main class="mt-[2rem] flex grow flex-col gap-14 px-2 text-white">
         <div
             class="flex flex-col items-center text-4xl font-bold uppercase drop-shadow-text"
         >
@@ -18,12 +21,12 @@ import { Github } from '@steeze-ui/simple-icons';
         </div>
         <div class="flex flex-row flex-wrap justify-center gap-x-4 gap-y-4">
             <div
-                class="flex max-w-md flex-col items-center self-start text-xl drop-shadow-text max-md:max-w-[80%]"
+                class="max-md:max-w-[80%] flex max-w-md flex-col items-center self-start text-xl drop-shadow-text"
             >
                 <span class="text-center" set:html={m.features_leftmessage()} />
             </div>
             <div
-                class="flex max-w-md flex-col items-center self-start text-xl drop-shadow-text max-md:max-w-[80%]"
+                class="max-md:max-w-[80%] flex max-w-md flex-col items-center self-start text-xl drop-shadow-text"
             >
                 <span
                     class="text-center"

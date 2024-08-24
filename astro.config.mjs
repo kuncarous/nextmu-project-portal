@@ -6,6 +6,11 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
+    vite: {
+        ssr: {
+            external: ['node:async_hooks'],
+        },
+    },
     integrations: [
         svelte(),
         tailwind(),
@@ -14,7 +19,7 @@ export default defineConfig({
             outdir: './src/paraglide',
         }),
     ],
-    output: 'server',
+    output: 'hybrid',
     adapter: cloudflare(),
     i18n: {
         defaultLocale: 'en-us',

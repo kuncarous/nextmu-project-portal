@@ -15,29 +15,29 @@
         "deploy": "wrangler pages deploy dist --branch=main"
     },
     "dependencies": {
-        "@astrojs/check": "^0.5.10",
-        "@astrojs/cloudflare": "^10.2.5",
-        "@astrojs/svelte": "^5.4.0",
+        "@astrojs/check": "^0.9.3",
+        "@astrojs/cloudflare": "^11.0.4",
+        "@astrojs/svelte": "^5.7.0",
         "@astrojs/tailwind": "^5.1.0",
-        "@inlang/paraglide-astro": "^0.1.7",
-        "@steeze-ui/heroicons": "^2.3.0",
-        "@steeze-ui/simple-icons": "^1.7.1",
+        "@inlang/paraglide-astro": "^0.2.2",
+        "@steeze-ui/heroicons": "^2.4.0",
+        "@steeze-ui/simple-icons": "^1.9.0",
         "@steeze-ui/svelte-icon": "^1.5.0",
-        "astro": "^4.7.1",
-        "flag-icons": "^7.2.1",
-        "preline": "^2.1.0",
-        "svelte": "^4.2.15",
-        "tailwindcss": "^3.4.3",
-        "typescript": "^5.4.5"
+        "astro": "^4.14.5",
+        "flag-icons": "^7.2.3",
+        "preline": "^2.4.1",
+        "svelte": "^4.2.19",
+        "tailwindcss": "^3.4.10",
+        "typescript": "^5.5.4"
     },
     "devDependencies": {
-        "@inlang/paraglide-js": "1.7.3",
-        "prettier": "^3.2.5",
-        "prettier-plugin-astro": "^0.13.0",
-        "prettier-plugin-svelte": "^3.2.3",
-        "prettier-plugin-tailwindcss": "^0.5.14",
-        "sass": "^1.76.0",
+        "@inlang/paraglide-js": "1.11.2",
+        "prettier": "^3.3.3",
+        "prettier-plugin-astro": "^0.14.1",
+        "prettier-plugin-svelte": "^3.2.6",
+        "prettier-plugin-tailwindcss": "^0.6.6",
+        "sass": "^1.77.8",
         "shx": "^0.3.4",
-        "wrangler": "^3.53.1"
+        "wrangler": "^3.72.2"
     }
 }
