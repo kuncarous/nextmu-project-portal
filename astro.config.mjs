@@ -6,11 +6,6 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-    vite: {
-        ssr: {
-            external: ['node:async_hooks'],
-        },
-    },
     integrations: [
         svelte(),
         tailwind(),
@@ -20,7 +15,17 @@ export default defineConfig({
         }),
     ],
     output: 'hybrid',
-    adapter: cloudflare(),
+    vite: {
+        ssr: {
+            external: ['node:async_hooks'],
+        },
+    },
+    adapter: cloudflare({
+        platformProxy: {
+            enabled: true,
+            configPath: 'wrangler.toml',
+        },
+    }),
     i18n: {
         defaultLocale: 'en-us',
         locales: ['en-us', 'es-es', 'pt-br'],
