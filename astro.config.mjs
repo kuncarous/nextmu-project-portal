@@ -33,4 +33,13 @@ export default defineConfig({
             prefixDefaultLocale: true,
         },
     },
+    redirects: {
+        '/': {
+            status: 301,
+            destination: '/en-us/',
+        },
+    },
+    build: {
+        redirects: false,
+    },
 });
