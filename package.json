@@ -4,8 +4,8 @@
     "version": "0.0.1",
     "scripts": {
         "dev": "astro dev",
-        "start": "astro dev",
-        "prebuild": "shx cp ./node_modules/preline/dist/preline.js ./public/preline.js && paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
+        "start": "$npm_execpath run dev",
+        "prebuild": "$npm_execpath run build:paraglide",
         "build": "astro check && astro build",
         "preview": "astro preview",
         "preview:wrangler": "wrangler pages dev ./dist",
@@ -23,7 +23,7 @@
         "@steeze-ui/heroicons": "^2.4.0",
         "@steeze-ui/simple-icons": "^1.9.0",
         "@steeze-ui/svelte-icon": "^1.5.0",
-        "astro": "^4.14.5",
+        "astro": "^4.15.4",
         "flag-icons": "^7.2.3",
         "preline": "^2.4.1",
         "svelte": "^4.2.19",
@@ -36,8 +36,8 @@
         "prettier-plugin-astro": "^0.14.1",
         "prettier-plugin-svelte": "^3.2.6",
         "prettier-plugin-tailwindcss": "^0.6.6",
-        "sass": "^1.77.8",
+        "sass": "^1.78.0",
         "shx": "^0.3.4",
-        "wrangler": "^3.72.2"
+        "wrangler": "^3.75.0"
     }
 }

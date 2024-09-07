@@ -1,3 +1,7 @@
+---
+import { sourceLanguageTag } from '~/paraglide/runtime';
+---
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,7 +11,10 @@
             property="og:image"
             content="https://nextmu.dev/images/logo_alt.webp"
         />
-        <link rel="canonical" href="https://nextmu.dev/en-us/" />
+        <link
+            rel="canonical"
+            href={`https://nextmu.dev/${sourceLanguageTag}/`}
+        />
         <style is:global lang="scss">
             body {
                 display: flex;

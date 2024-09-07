@@ -1,12 +1,12 @@
 ---
-import * as m from '~/paraglide/messages';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import * as m from '~/paraglide/messages';
 import { languageTag } from '~/paraglide/runtime';
 const { selected } = Astro.props;
 ---
 
 <div
-    class="mobile:flex-row max-mobile:mt-5 flex flex-col items-center gap-5 font-medium uppercase text-white sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5"
+    class="sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5 flex flex-col items-center gap-5 font-medium uppercase text-white max-mobile:mt-5 mobile:flex-row"
 >
     <a
         class={`drop-shadow-text hover:text-nextmu-green-hover active:text-nextmu-green-active ${selected === 'home' ? `text-nextmu-green-active` : ''}`}

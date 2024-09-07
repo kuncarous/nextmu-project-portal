@@ -4,9 +4,9 @@
         isAvailableLanguageTag,
         languageTag,
         type AvailableLanguageTag,
-    } from '../paraglide/runtime';
-    import { Languages } from '../consts/languages.ts';
-    import { getRelativeLocaleUrl } from 'astro/virtual-modules/i18n.js';
+    } from '~/paraglide/runtime.js';
+    import { Languages } from '~/consts/languages.ts';
+    import { getRelativeLocaleUrl } from 'astro:i18n';
     export let url: string;
 
     function getCurrentUrl() {
