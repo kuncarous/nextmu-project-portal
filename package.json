@@ -4,8 +4,8 @@
     "version": "0.0.1",
     "scripts": {
         "dev": "astro dev",
-        "start": "$npm_execpath run dev",
-        "prebuild": "$npm_execpath run build:paraglide",
+        "start": "astro dev",
+        "prebuild": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
         "build": "astro check && astro build",
         "preview": "astro preview",
         "preview:wrangler": "wrangler pages dev ./dist",
